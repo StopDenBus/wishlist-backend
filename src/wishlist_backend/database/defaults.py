@@ -1,0 +1,2 @@
+DEFAULT_DATABASE_NAME = 'wishlist'
+DEFAULT_DATABASE_USERNAME = 'wishlist'

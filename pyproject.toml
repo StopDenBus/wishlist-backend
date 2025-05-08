@@ -1,0 +1,28 @@
+[project]
+name = "wishlist-backend"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Michael Gusek",email = "michael.gusek@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi (>=0.115.12,<0.116.0)",
+    "uvicorn[standard] (>=0.34.2,<0.35.0)",
+    "databases[aiomysql] (>=0.9.0,<0.10.0)",
+    "mysql-connector-python (>=9.3.0,<10.0.0)",
+    "classy-fastapi (>=0.6.1,<0.7.0)",
+    "cryptography (>=44.0.3,<45.0.0)"
+]
+
+[tool.poetry]
+packages = [{include = "wishlist_backend", from = "src"}]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "src.wishlist_backend.main:start"
