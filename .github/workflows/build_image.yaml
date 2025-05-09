@@ -12,8 +12,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Bump version and push tag
-        uses: laputansoft/github-tag-action@v4.6
-        with:
-          github_token: ${{ env.github-token }}
-          release_branches: main
+      - uses: langroodi/tagize@v1.0.1
