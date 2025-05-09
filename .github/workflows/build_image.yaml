@@ -1,7 +1,8 @@
 name: Publish image
 on:
-  pull_request:
-    types: [ closed ]
+  push:
+    branches:
+      - main
     paths-ignore:
       - '.github/workflows/**'
   workflow_dispatch:
@@ -10,8 +11,9 @@ jobs:
   tag:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - uses: actions/checkout@v4
       - name: Bump version and push tag
         uses: laputansoft/github-tag-action@v4.6
         with:
           github_token: ${{ env.github-token }}
+          release_branches: main
