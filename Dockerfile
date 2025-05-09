@@ -12,7 +12,7 @@ USER app
 
 WORKDIR /app
 
-COPY --exclude=Dockerfile --exclude=.git --exclude=.git --chown=app:app . /app/
+COPY --chown=app:app . /app/
 
 RUN chmod u+x /app/entrypoint.sh
 
