@@ -13,7 +13,7 @@ dependencies = [
     "databases[aiomysql] (>=0.9.0,<0.10.0)",
     "mysql-connector-python (>=9.3.0,<10.0.0)",
     "classy-fastapi (>=0.6.1,<0.7.0)",
-    "cryptography (>=44.0.3,<45.0.0)"
+    "cryptography (>=45.0.2,<45.1.0)"
 ]
 
 [tool.poetry]
