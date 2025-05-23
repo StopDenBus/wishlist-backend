@@ -16,7 +16,7 @@ COPY --chown=app:app . /app/
 
 RUN chmod u+x /app/entrypoint.sh
 
-RUN poetry install --no-root
+RUN poetry lock && poetry install --no-root
 
 EXPOSE 8000
 
