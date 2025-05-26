@@ -54,6 +54,10 @@ wish_routes = WishRoutes(database = database, metadata = metadata)
 app = FastAPI(lifespan=lifespan, openapi_tags=tags_metadata)
 app.include_router(wish_routes.router)
 
+@app.get("/readiness")
+async def readiness():
+    return {"status": "ok"}
+
 def start():
     """Launched with `poetry run start` at root level"""
  
