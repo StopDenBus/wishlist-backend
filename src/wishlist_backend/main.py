@@ -51,7 +51,15 @@ if database_type in [ "mysql", "pgsql" ]:
 
 wish_routes = WishRoutes(database = database, metadata = metadata)
 
-app = FastAPI(lifespan=lifespan, openapi_tags=tags_metadata)
+app = FastAPI(
+    lifespan=lifespan,
+    openapi_tags=tags_metadata,
+    servers=[
+        { "url": "https://wishlist-backend.apps.gusek.info", "description": "External address"},
+        { "url": "http://wishlist-backend.wishlist.svc.cluster.local", "description": "Internal address"},
+    ],
+    root_path_in_servers=False
+)
 app.include_router(wish_routes.router)
 
 @app.get("/readiness")
