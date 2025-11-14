@@ -164,19 +164,19 @@ pycparser = {version = "*", markers = "implementation_name != \"PyPy\""}
 
 [[package]]
 name = "classy-fastapi"
-version = "0.6.1"
+version = "0.7.0"
 description = "Class based routing for FastAPI"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "classy-fastapi-0.6.1.tar.gz", hash = "sha256:5dfc33bab8e01e07c56855b78ce9a8152c871ab544a565d0d3d05a5c1ca4ed68"},
-    {file = "classy_fastapi-0.6.1-py3-none-any.whl", hash = "sha256:196e5c2890269627d52851f3f86001a0dfda0070053d38f8a7bd896ac2f67737"},
+    {file = "classy_fastapi-0.7.0-py3-none-any.whl", hash = "sha256:eea211181d065fecb543d68b75a6a6ab93393bb7ca48551887fa898ba7d40ec3"},
+    {file = "classy_fastapi-0.7.0.tar.gz", hash = "sha256:4ab934fc309b134cd8dde5f7d6f98e1303a111cf1341ebd5bf900a630d20b084"},
 ]
 
 [package.dependencies]
 fastapi = ">=0.73.0,<1.0.0"
-pydantic = ">=1.10.2,<3.0.0"
+pydantic = ">=2.8,<3.0.0"
 
 [[package]]
 name = "click"
@@ -1167,4 +1167,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13"
-content-hash = "b0ab7ed8a965875424518c93ffd4d330d0aa3a7afadc9df5a1680a906e3a22d4"
+content-hash = "8724b96d2675486a430c8ead2ae3b4dd9c1b7616b1d3005721170cc7069b19e7"
