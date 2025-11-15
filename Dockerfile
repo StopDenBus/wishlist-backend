@@ -1,8 +1,8 @@
-FROM python:3.14-alpine3.22
+FROM python:3.13-alpine3.22
 
-ARG POETRY_VERSION=2.1.3
+ARG POETRY_VERSION=2.2.1
 
-RUN pip install "poetry==${POETRY_VERSION}"
+RUN pip install "poetry==${POETRY_VERSION}" && apk add cargo
 
 # Create a custom user with UID 1234 and GID 1234
 RUN addgroup --gid 1001 app && \
